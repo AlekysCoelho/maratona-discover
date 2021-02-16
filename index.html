@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>DevFinance$</title>
+</head>
+<body>
+  <header>
+    <img src="./img/logo.svg" alt="logo finance">
+  </header>
+  <hr />
+  <main class="container" id="blur">
+    <section id="balance">
+      <h2 class="sr-only">Balanço</h2>
+      <div class="card">
+        <h3>
+          <span>Entradas</span>
+          <img src="./img/income.svg" alt="Imagem de Entradas">
+        </h3>
+        <p>R$ 0.00</p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <span>Saídas</span>
+          <img src="./img/expense.svg" alt="Imagem de Saídas">
+        </h3>
+        <p>R$ 0.00</p>
+      </div>
+
+      <div class="card total">
+        <h3>
+          <span>Total</span>
+          <img src="./img/total.svg" alt="Imagem do Total">
+        </h3>
+        <p>R$ 0.00</p>
+      </div>
+    </section>
+
+    <section id="transaction">
+      <h2 class="sr-only">Transações</h2>
+      <a href="#" id="btn-modal">
+        <i class="material-icons">add</i>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Transação
+      </a>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="description">Luz</td>
+            <td class="expense">- R$ 60,00</td>
+            <td class="date">20/02/2021</td>
+            <td><i class="material-icons trash">delete</i></td>
+          </tr>
+
+          <tr>
+            <td class="description">Internet</td>
+            <td class="expense">- R$ 65,00</td>
+            <td class="date">17/02/2021</td>
+            <td><i class="material-icons trash">delete</i></td>
+          </tr>
+
+          <tr>
+            <td class="description">App</td>
+            <td class="income">R$ 6000,00</td>
+            <td class="date">10/02/2021</td>
+            <td><i class="material-icons trash">delete</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>dev.finance$</p>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
