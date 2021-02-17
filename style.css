@@ -38,7 +38,6 @@ body {
   width: 100vw;
   font-family: "Convergence", sans-serif;
   background: var(--clr-bg);
-  /* background: var(--clr-bg-darkBlue); */
 }
 
 .sr-only {
@@ -216,6 +215,19 @@ table th {
   cursor: pointer;
 }
 
+.data-table .th-sort-asc::after {
+  content: '\25b4';
+}
+
+.data-table .th-sort-desc::after {
+  content: '\25be';
+}
+
+.data-table .th-sort-asc::after,
+.data-table .th-sort-desc::after {
+  margin-left:2px;
+}
+
 table thead th:nth-child(1) {
   width: 200px;
 }
@@ -303,11 +315,26 @@ footer {
 /* ================= Responsive ================= */
 
 @media (min-width: 800px) {
+
   html {
     font-size: 87.5%;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+    background:#24243e;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(transparent, #a55eea);
+    border-radius: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #880288);
   }
 
   #balance {
