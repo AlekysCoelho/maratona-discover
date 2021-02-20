@@ -53,72 +53,113 @@
         <span></span>
         Transação
       </a>
-
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th class="th-sort-asc">Descrição</th>
-            <th>Valor</th>
-            <th>Data</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="description">Luz</td>
-            <td class="expense">- R$ 60,00</td>
-            <td class="date">20/02/2021</td>
-            <td><i class="material-icons trash">delete</i></td>
-          </tr>
-
-          <tr>
-            <td class="description">Internet</td>
-            <td class="expense">- R$ 65,00</td>
-            <td class="date">17/02/2021</td>
-            <td><i class="material-icons trash">delete</i></td>
-          </tr>
-
-          <tr>
-            <td class="description">App</td>
-            <td class="income">R$ 6000,00</td>
-            <td class="date">10/02/2021</td>
-            <td><i class="material-icons trash">delete</i></td>
-          </tr>
-
-          <tr>
-            <td class="description">App</td>
-            <td class="income">R$ 6000,00</td>
-            <td class="date">10/02/2021</td>
-            <td><i class="material-icons trash">delete</i></td>
-          </tr>
-
-          <tr>
-            <td class="description">App</td>
-            <td class="income">R$ 6000,00</td>
-            <td class="date">10/02/2021</td>
-            <td><i class="material-icons trash">delete</i></td>
-          </tr>
-
-          <tr>
-            <td class="description">App</td>
-            <td class="income">R$ 6000,00</td>
-            <td class="date">10/02/2021</td>
-            <td><i class="material-icons trash">delete</i></td>
-          </tr>
-
-          <tr>
-            <td class="description">App</td>
-            <td class="income">R$ 6000,00</td>
-            <td class="date">10/02/2021</td>
-            <td><i class="material-icons trash">delete</i></td>
-          </tr>
-        </tbody>
-      </table>
+      
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th class="th-sort-asc">Descrição</th>
+              <th>Valor</th>
+              <th>Data</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="description">Luz</td>
+              <td class="expense">- R$ 60,00</td>
+              <td class="date">20/02/2021</td>
+              <td><i class="material-icons trash">delete</i></td>
+            </tr>
+  
+            <tr>
+              <td class="description">Internet</td>
+              <td class="expense">- R$ 65,00</td>
+              <td class="date">17/02/2021</td>
+              <td><i class="material-icons trash">delete</i></td>
+            </tr>
+  
+            <tr>
+              <td class="description">App</td>
+              <td class="income">R$ 6000,00</td>
+              <td class="date">10/02/2021</td>
+              <td><i class="material-icons trash">delete</i></td>
+            </tr>
+  
+            <tr>
+              <td class="description">App</td>
+              <td class="income">R$ 6000,00</td>
+              <td class="date">10/02/2021</td>
+              <td><i class="material-icons trash">delete</i></td>
+            </tr>
+  
+            <tr>
+              <td class="description">App</td>
+              <td class="income">R$ 6000,00</td>
+              <td class="date">10/02/2021</td>
+              <td><i class="material-icons trash">delete</i></td>
+            </tr>
+  
+            <tr>
+              <td class="description">App</td>
+              <td class="income">R$ 6000,00</td>
+              <td class="date">10/02/2021</td>
+              <td><i class="material-icons trash">delete</i></td>
+            </tr>
+  
+            <tr>
+              <td class="description">App</td>
+              <td class="income">R$ 6000,00</td>
+              <td class="date">10/02/2021</td>
+              <td><i class="material-icons trash">delete</i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
 
+  <div class="modal-overlay">
+    <div class="modal">
+      <div id="form">
+        <h2>Nova Transação</h2>
+        <form action="" onsubmit="">
+          <div class="form-input">
+            <input class="form__input" type="text" id="description" name="description" placeholder=" " />
+            <label class="form__label" for="description">Descrição</label>
+          </div>
+          <div class="form-input">
+            <input class="form__input" type="number" step="0.01" id="amount" name="amount" placeholder=" " />
+            <label class="form__label" for="amount">Valor: 0,00</label>
+            
+          </div>
+
+          <div class="input-group">
+            <input type="date" id="date" name="date" class="">
+            <span id="span"></span>
+            <!--label for="sr-only" for="date">Date</label-->
+          </div>
+
+          <div class="input-group actions">
+            <a href="#" class="button cancel" id="closeModal">
+              <span class="material-icons">cancel</span>
+              Esc
+            </a>
+            <button id="btn-form">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Salvar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <footer>
-    <p>dev.finance$</p>
+    <p>dev.finance<span>$</span></p>
   </footer>
   <script src="index.js"></script>
 </body>
