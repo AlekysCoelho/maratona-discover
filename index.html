@@ -23,7 +23,7 @@
           <span>Entradas</span>
           <img src="./img/income.svg" alt="Imagem de Entradas">
         </h3>
-        <p>R$ 0.00</p>
+        <p id="incomeDisplay" >R$ 0,00</p>
       </div>
 
       <div class="card">
@@ -31,7 +31,7 @@
           <span>Saídas</span>
           <img src="./img/expense.svg" alt="Imagem de Saídas">
         </h3>
-        <p>R$ 0.00</p>
+        <p id="expenseDisplay" >R$ 0,00</p>
       </div>
 
       <div class="card total">
@@ -39,7 +39,7 @@
           <span>Total</span>
           <img src="./img/total.svg" alt="Imagem do Total">
         </h3>
-        <p>R$ 0.00</p>
+        <p id="totalDisplay" >R$ 0,00</p>
       </div>
     </section>
 
@@ -65,54 +65,6 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="description">Luz</td>
-              <td class="expense">- R$ 60,00</td>
-              <td class="date">20/02/2021</td>
-              <td><i class="material-icons trash">delete</i></td>
-            </tr>
-  
-            <tr>
-              <td class="description">Internet</td>
-              <td class="expense">- R$ 65,00</td>
-              <td class="date">17/02/2021</td>
-              <td><i class="material-icons trash">delete</i></td>
-            </tr>
-  
-            <tr>
-              <td class="description">App</td>
-              <td class="income">R$ 6000,00</td>
-              <td class="date">10/02/2021</td>
-              <td><i class="material-icons trash">delete</i></td>
-            </tr>
-  
-            <tr>
-              <td class="description">App</td>
-              <td class="income">R$ 6000,00</td>
-              <td class="date">10/02/2021</td>
-              <td><i class="material-icons trash">delete</i></td>
-            </tr>
-  
-            <tr>
-              <td class="description">App</td>
-              <td class="income">R$ 6000,00</td>
-              <td class="date">10/02/2021</td>
-              <td><i class="material-icons trash">delete</i></td>
-            </tr>
-  
-            <tr>
-              <td class="description">App</td>
-              <td class="income">R$ 6000,00</td>
-              <td class="date">10/02/2021</td>
-              <td><i class="material-icons trash">delete</i></td>
-            </tr>
-  
-            <tr>
-              <td class="description">App</td>
-              <td class="income">R$ 6000,00</td>
-              <td class="date">10/02/2021</td>
-              <td><i class="material-icons trash">delete</i></td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -123,7 +75,7 @@
     <div class="modal">
       <div id="form">
         <h2>Nova Transação</h2>
-        <form action="" onsubmit="">
+        <form action="" onsubmit="Form.submit(event)">
           <div class="form-input">
             <input class="form__input" type="text" id="description" name="description" placeholder=" " />
             <label class="form__label" for="description">Descrição</label>
@@ -140,11 +92,14 @@
             <!--label for="sr-only" for="date">Date</label-->
           </div>
 
-          <div class="input-group actions">
+          <div class="btn-cancel">
             <a href="#" class="button cancel" id="closeModal">
               <span class="material-icons">cancel</span>
               Esc
             </a>
+          </div>
+
+          <div class="input-group actions">      
             <button id="btn-form">
               <span></span>
               <span></span>
@@ -158,7 +113,7 @@
     </div>
   </div>
 
-  <footer>
+  <footer >
     <p>dev.finance<span>$</span></p>
   </footer>
   <script src="index.js"></script>
