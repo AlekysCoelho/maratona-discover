@@ -54,41 +54,38 @@ function tableOrganized() {
 }
 
 // Open and Close Modal
-const OpenAndCloseModal = {
-  open() {
-    const modalOverlay = document.querySelector('.modal-overlay');
-    const mainBlur = document.getElementById('blur');
-    const btnOpenModal = document.getElementById('btn-modal');
-    btnOpenModal.onclick = function () {
-      modalOverlay.classList.add('active');
-      mainBlur.classList.add('active');
-    };
-  },
+function OpenAndCloseModal() {
+  const modalOverlay = document.querySelector('.modal-overlay');
+  const mainBlur = document.getElementById('blur');
+  const btnOpenModal = document.getElementById('btn-modal');
+  const btnCloseModal = document.getElementById('closeModal');
+  
+  
+  btnOpenModal.onclick = function() {
+    modalOverlay.classList.add('active');
+    mainBlur.classList.add('active');
+  };
 
-  close() {
-    const modalOverlay = document.querySelector('.modal-overlay');
-    const mainBlur = document.getElementById('blur');
-    const btnCloseModal = document.getElementById('closeModal');
-    btnCloseModal.onclick = function () {
+  btnCloseModal.onclick = function() {
+    modalOverlay.classList.remove('active');
+    mainBlur.classList.remove('active');
+  }
+
+  document.addEventListener('keydown', function (event) {
+    const isEscKey = event.key === 'Escape';
+    if (isEscKey) {
       modalOverlay.classList.remove('active');
       mainBlur.classList.remove('active');
-    };
-  },
-
-  closeKeydown() {
-    const modalOverlay = document.querySelector('.modal-overlay');
-    const mainBlur = document.getElementById('blur');
-    document.addEventListener('keydown', function (event) {
-      const isEscKey = event.key === 'Escape';
-      if (isEscKey) {
-        modalOverlay.classList.remove('active');
-        mainBlur.classList.remove('active');
-      }
-    });
-  },
+    }
+  });
 };
 
-
+const Modal = {
+  close() {
+    document.querySelector('.modal-overlay').classList.remove('active')
+    document.getElementById('blur').classList.remove('active');
+  }
+}
 
 // Local Storage
 const Storage = {
@@ -270,8 +267,7 @@ const Form = {
       const transaction = Form.formatValues();
       Transaction.add(transaction);
       Form.clearFields();
-      //Modal.close()
-      OpenAndCloseModal.close()
+      Modal.close();
     } catch (error) {
       alert(error.message);
     }
@@ -295,7 +291,4 @@ const App = {
 App.init();
 
 tableOrganized();
-
-OpenAndCloseModal.open();
-
-OpenAndCloseModal.closeKeydown();
+OpenAndCloseModal();
