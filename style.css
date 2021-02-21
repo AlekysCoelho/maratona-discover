@@ -98,9 +98,8 @@ a, button {
   flex-direction: column;
   text-decoration: none;
   color: var(--clr-modal);
-  top:-250px;
+  top:-280px;
   right: -110px;
-
 }
 
 .button.cancel span {
@@ -109,22 +108,23 @@ a, button {
 
 #btn-form {
   position: relative;
-  /* left: 130px; */
-  /* margin-top: 40px; */
+  padding: 1rem 1.5rem;
+  font-weight: 600;
   color: var(--clr-primary-light);
   overflow: hidden;
   transition: 0.2s;
-  border: 1px solid var(--clr-primary-light);
+  border: 2px solid var(--clr-primary-light);
   border-radius: var(--bd-radius);
-  /* transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1); */
-  transition: all 0.3s ease-in;
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  /* transition: all 0.3s ease-in; */
   cursor: pointer;
 }
 
-#btn-form:hover {
+#btn-form:hover,
+#btn-form:active {
   border: 2px solid var(--clr-primary);
-  font-weight: 600;
-  transform: scaleX(1);
+  border-radius: var(--bd-radius);
+  outline: none;
 }
 
 #btn-modal {
@@ -358,7 +358,7 @@ td.expense {
 
 #form h2 {
   margin-top: 2rem;
-  font-size: 1.1rem;
+  font-size: 2.1rem;
 }
  
 form {
