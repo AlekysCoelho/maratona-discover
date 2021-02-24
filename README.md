@@ -5,7 +5,7 @@
 
 > :rocket:  &nbsp; Tecnologias
 ### Projeto desenvolvido com as seguintes tecnologias:
-<br />
+
 * HTML
 * CSS
 * JavaScript
