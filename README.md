@@ -1,6 +1,6 @@
 ## dev.finance$
 
-<img width="auto" src="https://github.com/AlekysCoelho/maratona-discover/.github/devFinances.png">
+<img width="auto" src="https://github.com/AlekysCoelho/maratona-discover/blob/main/.github/devFinances.png">
 
 
 > :rocket:  &nbsp; Tecnologias
